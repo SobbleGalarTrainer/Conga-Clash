@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes congaStep {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-14px) rotate(6deg) scale(1.05); /* The KICK! */
+  }
+}
+
+@keyframes congaKickLeg {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(32deg) translateY(-4px);
+  }
+}
+
+@keyframes spotlightGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+}
+
+.animate-conga-step {
+  animation: congaStep 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+.animate-conga-kick-leg {
+  animation: congaKickLeg 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+.animate-spotlight {
+  animation: spotlightGlow 3s ease-in-out infinite alternate;
+}
+
+/* Wood dance floor background pattern */
+.bg-dance-floor {
+  background-color: #1a0f0a;
+  background-image: 
+    linear-gradient(45deg, rgba(255, 175, 50, 0.05) 25%, transparent 25%), 
+    linear-gradient(-45deg, rgba(255, 175, 50, 0.05) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, rgba(255, 175, 50, 0.05) 75%), 
+    linear-gradient(-45deg, transparent 75%, rgba(255, 175, 50, 0.05) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}

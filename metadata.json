@@ -1,0 +1,6 @@
+{
+  "name": "Conga Clash: Rock Paper Scissors Carnival",
+  "description": "An energetic party arcade game where winning Rock-Paper-Scissors duels recruits defeated dancers into an ever-growing conga line.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
